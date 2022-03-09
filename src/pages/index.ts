@@ -1,5 +1,5 @@
 import HomeScreen from "./home/homeScreen"
-import SavedSurveys from "./savedSurveys/savedSurveys"
 import Survey from "./survey/survey"
+import RecentSurveys from "./recentSurveys/recentSurveys"
 
-export { HomeScreen, SavedSurveys, Survey }
+export { HomeScreen, RecentSurveys, Survey }

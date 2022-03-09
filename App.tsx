@@ -2,8 +2,8 @@ import 'react-native-gesture-handler';
 import React, { FC } from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import RNBootSplash from "react-native-bootsplash";
-import BottomTabNavigator from './src/navigations/bottomTabNavigator';
-import AppProvider from './src/contexApi/appContext';
+import AppProvider from './src/contextApi/appContext';
+import { BottomTabNavigator } from './src/navigations';
 
 const App: FC = () => {
 

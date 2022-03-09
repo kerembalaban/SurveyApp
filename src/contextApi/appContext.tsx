@@ -1,14 +1,14 @@
 import React, { createContext, useState, FC, useEffect } from "react";
 import { AppContextState } from "./types";
 import { getData, storeData } from "../utils/helpers";
-import IRecentSurveyModel from "../interfaces/recentSurveyModel";
+import { IRecentSurveyModel } from "../interfaces";
 
 const contextDefaultValues: AppContextState = {
     recents: [],
     addRecent: () => { }
 };
 
-export const AppContext = createContext<AppContextState>(
+const AppContext = createContext<AppContextState>(
     contextDefaultValues
 );
 
@@ -42,4 +42,4 @@ const AppProvider: FC = ({ children }) => {
     );
 };
 
-export default AppProvider;
+export { AppContext, AppProvider};

@@ -1,10 +1,6 @@
-import ISearchResult from "../interfaces/searchResult";
+import { IRecentSurveyModel } from "../interfaces";
 
 export type AppContextState = {
-    favorites: ISearchResult[],
-    recents: ISearchResult[],
-    addFavorite: (item: ISearchResult) => void,
-    addRecentSearch: (item: ISearchResult) => void,
-    removeFavorite: (item: ISearchResult) => void,
-    removeRecentSearch: (item: ISearchResult) => void
+    recents: IRecentSurveyModel[],
+    addRecent: (item: IRecentSurveyModel) => void
 };

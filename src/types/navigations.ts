@@ -7,12 +7,12 @@ export type BottomTabParams = {
 
 export type HomeStackParams = {
     Home: undefined;
-    Survey: { survey: ISurveyModel };
+    Survey: { survey: ISurveyModel[] };
 };
 
 export type SavedSurveysStackParams = {
     SavedSurveys: undefined;
-    Survey: { survey: ISurveyModel };
+    Survey: { survey: ISurveyModel[] };
 };
 
 export interface RootStackParamList

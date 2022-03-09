@@ -2,7 +2,7 @@ import { BottomTabScreenProps, createBottomTabNavigator } from "@react-navigatio
 import React, { FC } from "react";
 import { BottomTabParams } from "../types/navigations";
 import HomeNavigator from "./homeStack";
-import SavedSurveysNavigator from "./savedSurveysStack";
+import SavedSurveysNavigator from "./recentSurveysStack";
 
 const BottomTab = createBottomTabNavigator<BottomTabParams>()
 

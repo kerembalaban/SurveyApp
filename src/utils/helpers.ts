@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage"
-import IRecentSurveyModel from "../interfaces/recentSurveyModel";
+import { IRecentSurveyModel } from "../interfaces";
 
 export const storeData = async (key: string, value: IRecentSurveyModel[]) => {
     try {

@@ -1,7 +1,6 @@
 interface ISurveyModel {
     question: string
-    range: [string]
-    createdAt: Date
+    answer: string
 }
 
 export default ISurveyModel
