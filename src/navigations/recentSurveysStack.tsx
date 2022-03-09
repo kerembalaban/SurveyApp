@@ -5,16 +5,15 @@ import { SavedSurveysStackParams } from "../types/navigations";
 
 const Stack = createNativeStackNavigator<SavedSurveysStackParams>()
 
-const SavedSurveysNavigator: FC = () => {
+const RecentSurveysNavigator: FC = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen name="SavedSurveys" component={SavedSurveys} options={{
                 title: "Saved Surveys"
             }} />
-            <Stack.Screen name="Survey" component={Survey}
-                options={({ route }) => ({ title: route.params.survey.createdAt.toDateString() })} />
+            <Stack.Screen name="Survey" component={Survey} />
         </Stack.Navigator>
     )
 }
 
-export default SavedSurveysNavigator
+export default RecentSurveysNavigator
