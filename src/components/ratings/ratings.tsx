@@ -9,16 +9,19 @@ import styles from './ratings.style';
 
 type Props = {
     onPress(item: number): void,
-    selectedValue?: number
+    selectedValue?: number,
+    disabled: boolean
 };
 
-const Ratings = ({selectedValue, onPress }: Props) => {
+const Ratings = ({ selectedValue, onPress, disabled }: Props) => {
     return (
         <View style={styles.container}>
             {
                 surveyRangeData.map(value => {
                     return (
                         <TouchableOpacity
+                            key={value}
+                            disabled={disabled}
                             style={selectedValue && value <= selectedValue ? styles.selectedButton : styles.button}
                             onPress={() => onPress(value)}>
                             <Text style={selectedValue && value <= selectedValue ? styles.selectedText : styles.text}>{String(value)}</Text>

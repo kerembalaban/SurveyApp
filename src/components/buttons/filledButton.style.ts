@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../utils/colors";
 
 const styles = StyleSheet.create({
     container: {
+        width:'80%',
         height: 45,
-        backgroundColor: 'red',
+        backgroundColor: Colors.yellow,
         justifyContent: 'center',
         alignSelf: 'center',
         marginTop: 8,
@@ -11,8 +13,9 @@ const styles = StyleSheet.create({
         opacity: 1.0
     },
     disabledContainer: {
+        width:'80%',
         height: 45,
-        backgroundColor: 'red',
+        backgroundColor: Colors.yellow,
         justifyContent: 'center',
         alignSelf: 'center',
         marginTop: 8,
@@ -20,8 +23,9 @@ const styles = StyleSheet.create({
         opacity: 0.5
     },
     buttonTitle: {
-        fontSize: 14,
-        color: 'white',
+        fontSize: 16,
+        color: Colors.title,
+        fontFamily: 'NunitoSans-Bold',
         alignSelf: 'center',
         paddingHorizontal: 24
     }

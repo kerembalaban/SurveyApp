@@ -7,22 +7,22 @@ const styles = StyleSheet.create({
         marginTop: 8,
         padding: 16,
         height: 120,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue,
         borderRadius: 20
     },
     surveyText: {
         fontSize: 20,
         fontFamily: 'NunitoSans-Bold',
-        color: Colors.blue
+        color: Colors.backgroundSecondary
     },
     surveySubtext: {
         fontSize: 16,
-        color: Colors.blue
+        color: Colors.backgroundSecondary
     },
     surveyBottomText: {
         fontSize: 16,
         marginStart: 16,
-        color: Colors.title,
+        color: Colors.backgroundSecondary,
         bottom: 16,
         position: 'absolute'
     }

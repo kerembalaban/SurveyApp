@@ -1,9 +1,11 @@
 import ISurveyModel from "./surveyModel"
+import IQuestionModel from "./surveyModel"
 
 interface IRecentSurveyModel {
-    id: string
+    id: number
+    name: string
     survey: ISurveyModel[]
-    createdAt: Date
+    createdAt?: Date
 }
 
 export default IRecentSurveyModel

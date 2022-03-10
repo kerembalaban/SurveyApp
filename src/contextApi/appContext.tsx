@@ -16,11 +16,11 @@ const AppProvider: FC = ({ children }) => {
     const [recents, setRecents] = useState<IRecentSurveyModel[]>(contextDefaultValues.recents);
 
     const addRecent = async (item: IRecentSurveyModel) => {
+        debugger
         let tempRecents = [...recents, item]
         setRecents(tempRecents)
         storeData("recents", tempRecents)
     };
-
 
     useEffect(() => {
         const getRecentsFromAsyncStorage = async () => {

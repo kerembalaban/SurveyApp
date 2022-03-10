@@ -1,4 +1,5 @@
-import ISurveyModel from "../interfaces/surveyModel";
+import { IRecentSurveyModel } from "../interfaces";
+import IQuestionModel from "../interfaces/surveyModel";
 
 export type BottomTabParams = {
     HomeStack: undefined;
@@ -7,12 +8,12 @@ export type BottomTabParams = {
 
 export type HomeStackParams = {
     Home: undefined;
-    Survey: { survey?: ISurveyModel[] | null };
+    Survey: { survey?: IRecentSurveyModel, editable: boolean };
 };
 
 export type SavedSurveysStackParams = {
     SavedSurveys: undefined;
-    Survey: { survey?: ISurveyModel[] | null};
+    Survey: { survey?: IRecentSurveyModel, editable: boolean};
 };
 
 export interface RootStackParamList

@@ -9,11 +9,10 @@ const HomeNavigator: FC = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Home" component={HomeScreen} options={{
-                title: "Home"
-            }}/>
-            <Stack.Screen name="Survey" component={Survey} options={{
-                title: "Fill Out Survey"
-            }}/>
+                headerShown: false
+            }} />
+            <Stack.Screen name="Survey" component={Survey}
+                options={({ route }) => ({ title: route.params.survey?.name, headerShown: true })} />
         </Stack.Navigator>
     )
 }
