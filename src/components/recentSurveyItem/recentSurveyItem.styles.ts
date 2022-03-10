@@ -3,12 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 8
+        marginTop: 8,
+        backgroundColor:'white'
     },
     information: {
         flex: 1,
         marginHorizontal: 8,
-        marginTop: 16
+        padding:8
     },
     title: {
         fontSize: 16,

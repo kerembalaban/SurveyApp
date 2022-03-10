@@ -1,6 +1,6 @@
 import React from 'react'
 import { FlatList } from 'react-native';
-import { IRecentSurveyModel } from '../../interfaces';
+import IRecentSurveyModel from '../../interfaces/recentSurveyModel';
 import RecentSurveyItem from '../recentSurveyItem/recentSurveyItem';
 import styles from './flatList-styles'
 
