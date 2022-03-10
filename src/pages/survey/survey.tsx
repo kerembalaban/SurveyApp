@@ -4,11 +4,11 @@ import { Alert, Text, View } from 'react-native'
 import { FilledButton, Ratings, TextButton } from '../../components'
 import { AppContext } from '../../contextApi'
 import { IRecentSurveyModel, ISurveyModel } from '../../interfaces'
-import { SavedSurveysStackParams } from '../../types/navigations'
+import { HomeStackParams } from '../../types/navigations'
 import { surveyQuestions } from '../../utils/constants'
 import styles from './survey.style'
 
-type surveyRouteType = RouteProp<SavedSurveysStackParams>
+type surveyRouteType = RouteProp<HomeStackParams>
 
 const Survey: FC = () => {
     const navigation = useNavigation()
@@ -20,7 +20,9 @@ const Survey: FC = () => {
     const [questionModel, setQuestionModel] = useState<ISurveyModel>()
     const [answers, setAnswers] = useState<number[]>([])
 
+
     useEffect(() => {
+        // change question model on index changed
         setQuestionModel(selectedSurvey.survey[index])
     }, [index])
 
@@ -34,6 +36,7 @@ const Survey: FC = () => {
 
     const handleOnRate = (value: number) => {
         answers[index] = value
+        // deep copy for not allowed to change prev value
         setAnswers([...answers])
     }
 
@@ -68,7 +71,7 @@ const Survey: FC = () => {
 
                 <Text style={styles.question}>{questionModel?.question}</Text>
 
-                {/*  */}
+                {/* answer component */}
                 <View style={styles.answerContainer}>
                     {/* Rating component */}
                     <Ratings 
@@ -83,6 +86,7 @@ const Survey: FC = () => {
                 </View>
             </View>
 
+            {/* Create button visible if screen is editable mode */}
             {editable && <FilledButton title='Save' onPress={handleOnSaveSurvey} disabled={answers.length != selectedSurvey.survey.length}/>}
             
         </View>

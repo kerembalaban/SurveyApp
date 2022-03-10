@@ -15,10 +15,12 @@ const AppContext = createContext<AppContextState>(
 const AppProvider: FC = ({ children }) => {
     const [recents, setRecents] = useState<IRecentSurveyModel[]>(contextDefaultValues.recents);
 
+    // this context method used for save surveys answers
     const addRecent = async (item: IRecentSurveyModel) => {
-        debugger
         let tempRecents = [...recents, item]
         setRecents(tempRecents)
+
+        // This async storage process used for persist data, if use kill the app and to see recent surveys
         storeData("recents", tempRecents)
     };
 
@@ -35,8 +37,7 @@ const AppProvider: FC = ({ children }) => {
             value={{
                 recents,
                 addRecent
-            }}
-        >
+            }}>
             {children}
         </AppContext.Provider>
     );

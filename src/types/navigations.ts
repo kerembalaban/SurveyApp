@@ -1,24 +1,16 @@
 import { IRecentSurveyModel } from "../interfaces";
 import IQuestionModel from "../interfaces/surveyModel";
 
-export type BottomTabParams = {
-    HomeStack: undefined;
-    SavedSurveyStack: undefined;
-};
-
+// these values used to define screen names at Home navigation stack
 export type HomeStackParams = {
     Home: undefined;
     Survey: { survey?: IRecentSurveyModel, editable: boolean };
 };
 
-export type SavedSurveysStackParams = {
-    SavedSurveys: undefined;
-    Survey: { survey?: IRecentSurveyModel, editable: boolean};
-};
-
 export interface RootStackParamList
-    extends HomeStackParams, SavedSurveysStackParams { }
+    extends HomeStackParams { }
 
+    // this is used for seeing params on global
 declare global {
     namespace ReactNavigation {
         interface RootParamList

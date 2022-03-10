@@ -11,7 +11,6 @@ import styles from './homeScreen.style'
 const HomeScreen: FC = () => {
     const { recents } = useContext(AppContext)
     const navigation = useNavigation()
-    storeData("recents", [])
 
     const handleOnOpenSurvey = (item: IRecentSurveyModel) => {
         navigation.navigate("Survey", { survey: { ...item }, editable: true })
